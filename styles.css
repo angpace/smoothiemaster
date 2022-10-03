@@ -5,4 +5,23 @@ body {
         -o-background-size: cover;
         background-size: cover;
       }
-      
+
+  
+h1 {
+  text-align: left;
+  font-size: 60px;
+  font-weight: 600;
+  font-family: 'Niconne', cursive;
+  color: #4fa0ab;
+  text-shadow: 2px 2px 0px  #957dad,
+               4px 4px 0px #ee4b2b;
+}
+
+#blender {
+position: absolute;
+width: 13%;
+height: 36%;
+bottom: 20px;
+right: 200px;
+}
+

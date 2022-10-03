@@ -1,4 +1,8 @@
 body {
-    background-image: url(https://mediaproxy.salon.com/width/1200/https://media.salon.com/2022/06/gettyimages-1316586161-1.jpeg);
-    background-size: inherit;
-}
+        background: url(https://m.media-amazon.com/images/I/61emwBJkFbL._AC_SL1500_.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      

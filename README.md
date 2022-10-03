@@ -1,6 +1,2 @@
 # smoothiemaster
-Create a custom smoothie.
-
-
-Keshav Testing Testing Testing 
-test test again
+Create a custom smoothie with fruit of your choice. Blend and recieve the nutritional value. 

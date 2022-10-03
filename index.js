@@ -16,11 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
         fruitImg.src = fruit.image
         fruitName.textContent = fruit.name
         
-        newFruit.className = "fruits"
+        fruitImg.className = "fruits"
         newFruit.id = fruit.id
 
-        newFruit.append(fruitImg)
         newFruit.append(fruitName)
+        newFruit.append(fruitImg)
         fruitBasket.append(newFruit)
     }
 

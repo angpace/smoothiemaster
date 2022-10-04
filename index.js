@@ -8,48 +8,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //function to render the fruits in the ingredients section
-function fruitRender(data) {
+    function fruitRender(data) {
     data.forEach(fruit => {
         const newFruitImage = document.createElement('img')
         newFruitImage.src = fruit.image
-
         newFruitImage.className = "fruit"
+        
+        newFruitImage.addEventListener('dragstart', drag)
+        fruitBasket.addEventListener('drop', drop)
+        fruitBasket.addEventListener('dragover', allowDrop)
+        
 
         fruitBasket.append(newFruitImage)
         
     });
-    // let newFruit = document.createElement('div')
-    // let fruitImg = document.createElement('img')
-    // let fruitName = document.createElement('p')
 
-    // fruitImg.src = fruit.image
-    // fruitName.textContent = fruit.name
+    }
+    const blendDiv = document.querySelector(".card")
+    const blender = document.getElementById("blender")
 
-    // fruitImg.className = "fruits"
+    blender.addEventListener('drop', drop)
+    blender.addEventListener('dragover', allowDrop)
+    
+    const blendButton = document.createElement('button')
+    blendButton.textContent = "Blend"
+    blendButton.className = "btn"
+    blendButton.id = "blend-button"
+    
+    const resetButton = document.createElement('button')
+    resetButton.textContent = "Reset"
+    resetButton.className = "btn"
+    resetButton.id = "reset-button"
+    
+    blendButton.addEventListener('click', () => {
+        alert("Oops, nothing to blend! Try adding fruit by dragging them to the blender")
+    })
+    resetButton.addEventListener('click', () => {
+        alert("Reset!")
+    })
+    
+    blendDiv.append(blendButton)
+    blendDiv.append(resetButton)
 
-
-    // newFruit.append(fruitName)
-    // newFruit.append(fruitImg)
-    // fruitBasket.append(newFruit)
-}
-const blendDiv = document.querySelector(".card")
-const blender = document.getElementById("blender")
-const blendButton = document.createElement('button')
-blendButton.textContent = "Blend"
-blendButton.className = "btn"
-blendButton.id = "blend-button"
-const resetButton = document.createElement('button')
-resetButton.textContent = "Reset"
-resetButton.className = "btn"
-resetButton.id = "reset-button"
-blendButton.addEventListener('click', () => {
-alert("Oops, nothing to blend! Try adding fruit by dragging them to the blender")
-})
-resetButton.addEventListener('click', () => {
-    alert("Reset!")
-})
-blendDiv.append(blendButton)
-blendDiv.append(resetButton)
-
+    //functions to add as callback events for the drag and drop
+    function allowDrop(e) {
+        e.preventDefault();    
+    }
+      
+    function drag(e) {
+        console.log(e.target)
+        e.dataTransfer.setData("text", e.target.nutritions);
+    }
+      
+    function drop(e) {
+        e.preventDefault();
+        console.log(e.target)
+        let data = e.dataTransfer.getData("text");
+        e.target.append(document.getElementById(data));
+    }
 
 })

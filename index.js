@@ -14,11 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
         newFruitImage.src = fruit.image
         newFruitImage.className = "fruit"
         newFruitImage.id = fruit.name
-        const fruitNutrition = document.createElement('p')
+        const fruitNutrition = document.createElement('ul')
         for(let key in fruit.nutritions){
-            fruitNutrition.textContent += `${key}: ${fruit.nutritions[key]} `
+            let newNut = document.createElement('li')
+            newNut.className = key
+            newNut.textContent = fruit.nutritions[key]
+            fruitNutrition.append(newNut)
         }
-        console.log(fruitNutrition)
+        //console.log(fruitNutrition)
 
         newFruitImage.appendChild(fruitNutrition)
 

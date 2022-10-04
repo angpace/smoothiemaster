@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         newFruitImage.id = fruit.name
         const fruitNutrition = document.createElement('p')
         for(let key in fruit.nutritions){
-            fruitNutrition.textContent += `${fruit.nutritions[key]} `
+            fruitNutrition.textContent += `${key}: ${fruit.nutritions[key]} `
         }
         console.log(fruitNutrition)
 

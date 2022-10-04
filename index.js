@@ -32,11 +32,6 @@ function fruitRender(data) {
     // newFruit.append(fruitImg)
     // fruitBasket.append(newFruit)
 }
-=======
-        newFruit.append(fruitName)
-        newFruit.append(fruitImg)
-        fruitBasket.append(newFruit)
-    }
 const blendDiv = document.querySelector(".card")
 const blender = document.getElementById("blender")
 const blendButton = document.createElement('button')

@@ -37,9 +37,11 @@ const blender = document.getElementById("blender")
 const blendButton = document.createElement('button')
 blendButton.textContent = "Blend"
 blendButton.className = "btn"
+blendButton.id = "blend-button"
 const resetButton = document.createElement('button')
 resetButton.textContent = "Reset"
-resetButton.classname = "btn"
+resetButton.className = "btn"
+resetButton.id = "reset-button"
 blendButton.addEventListener('click', () => {
 alert("Smoothie!")
 })

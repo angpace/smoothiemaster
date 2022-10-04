@@ -1,27 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const fruitBasket = document.querySelector("#fruitList")
+    const fruitBasket = document.querySelector("#basket")
+    console.log(fruitBasket)
 
     fetch("http://localhost:3000/Fruits")
-    .then(data => data.json())
-    .then(res => res.forEach(element => {
-        fruitRender(element)
-    }))
+        .then(res => res.json())
+        .then(data => fruitRender(data))
 
-    //function to render the fruits in the ingredients section
-    function fruitRender(fruit){
-        let newFruit = document.createElement('div')
-        let fruitImg = document.createElement('img')
-        let fruitName = document.createElement('p')
 
-        fruitImg.src = fruit.image
-        fruitName.textContent = fruit.name
+//function to render the fruits in the ingredients section
+function fruitRender(data) {
+    data.forEach(fruit => {
+        const newFruitImage = document.createElement('img')
+        newFruitImage.src = fruit.image
+
+        newFruitImage.className = "fruit"
+
+        fruitBasket.append(newFruitImage)
         
-        fruitImg.className = "fruits"
-        newFruit.id = fruit.id
+    });
+    // let newFruit = document.createElement('div')
+    // let fruitImg = document.createElement('img')
+    // let fruitName = document.createElement('p')
 
-        newFruit.append(fruitName)
-        newFruit.append(fruitImg)
-        fruitBasket.append(newFruit)
-    }
+    // fruitImg.src = fruit.image
+    // fruitName.textContent = fruit.name
+
+    // fruitImg.className = "fruits"
+
+    // newFruit.append(fruitName)
+    // newFruit.append(fruitImg)
+    // fruitBasket.append(newFruit)
+}
 
 })

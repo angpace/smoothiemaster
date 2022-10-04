@@ -43,7 +43,7 @@ resetButton.textContent = "Reset"
 resetButton.className = "btn"
 resetButton.id = "reset-button"
 blendButton.addEventListener('click', () => {
-alert("Smoothie!")
+alert("Oops, nothing to blend! Try adding fruit by dragging them to the blender")
 })
 resetButton.addEventListener('click', () => {
     alert("Reset!")

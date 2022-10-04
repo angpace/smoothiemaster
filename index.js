@@ -27,9 +27,32 @@ function fruitRender(data) {
 
     // fruitImg.className = "fruits"
 
+
     // newFruit.append(fruitName)
     // newFruit.append(fruitImg)
     // fruitBasket.append(newFruit)
 }
+=======
+        newFruit.append(fruitName)
+        newFruit.append(fruitImg)
+        fruitBasket.append(newFruit)
+    }
+const blendDiv = document.querySelector(".card")
+const blender = document.getElementById("blender")
+const blendButton = document.createElement('button')
+blendButton.textContent = "Blend"
+blendButton.className = "btn"
+const resetButton = document.createElement('button')
+resetButton.textContent = "Reset"
+resetButton.classname = "btn"
+blendButton.addEventListener('click', () => {
+alert("Smoothie!")
+})
+resetButton.addEventListener('click', () => {
+    alert("Reset!")
+})
+blendDiv.append(blendButton)
+blendDiv.append(resetButton)
+
 
 })

@@ -24,6 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     }
+    const frameDiv = document.getElementById('picture-frame')
+    const pictureFrame = document.createElement('img')
+    pictureFrame.id = "img"
+    pictureFrame.src = "Art-empty-frame-in-golden-on-transparent-background-PNG.png"
+    frameDiv.append(pictureFrame)
+
+    pictureFrame.addEventListener("mouseover", () => {
+        alert('suprise!')
+    })
+    
     const blendDiv = document.querySelector(".card")
     const blender = document.getElementById("blender")
 

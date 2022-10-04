@@ -25,7 +25,7 @@
 }, {
     "name": "Banana",
     "id": 3,
-    "image": "https://images.heb.com/is/image/HEBGrocery/000377497",
+    "image": "backgroundless fruit/clipart3106604.png",
     "nutritions": {
         "carbohydrates": 22,
         "protein": 1,
@@ -36,7 +36,7 @@
 }, {
     "name": "Blackberry",
     "id": 4,
-    "image": "https://images.heb.com/is/image/HEBGrocery/000321290?fit=constrain,1&wid=800&hei=800&fmt=jpg&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0",
+    "image": "backgroundless fruit/pngwing.com.png",
     "nutritions": {
         "carbohydrates": 9,
         "protein": 1.3,
@@ -47,7 +47,7 @@
 }, {
     "name": "Blueberry",
     "id": 5,
-    "image": "https://images.heb.com/is/image/HEBGrocery/001146492",
+    "image": "backgroundless fruit/blueberrypngwing.com.png",
     "nutritions": {
         "carbohydrates": 5.5,
         "protein": 0,
@@ -58,7 +58,7 @@
 }, {
     "name": "Cherry",
     "id": 6,
-    "image": "https://static.libertyprim.com/files/familles/cerise-large.jpg?1569271737",
+    "image": "backgroundless fruit/clipart276559.png",
     "nutritions": {
         "carbohydrates": 12,
         "protein": 1,
@@ -69,7 +69,7 @@
 }, {
     "name": "Durian",
     "id": 7,
-    "image": "https://cdn.shopify.com/s/files/1/0271/6634/3237/products/musangking.png?v=1634508675",
+    "image": "backgroundless fruit/kisspng-thai-cuisine-durio-zibethinus-fruit-singaporean-cu-durian-5ac08379a3b8d4.8375135115225660096706.png",
     "nutritions": {
         "carbohydrates": 27.1,
         "protein": 1.5,
@@ -80,7 +80,7 @@
 }, {
     "name": "Fig",
     "id": 8,
-    "image": "https://static.libertyprim.com/files/familles/figue-large.jpg?1569271764",
+    "image": "backgroundless fruit/figpngwing.com.png",
     "nutritions": {
         "carbohydrates": 19,
         "protein": 0.8,
@@ -91,7 +91,7 @@
 }, {
     "name": "Gooseberry",
     "id": 9,
-    "image": "https://m.media-amazon.com/images/I/41eqZe06LLL.jpg",
+    "image": "backgroundless fruit/gooseberrypngwing.com.png",
     "nutritions": {
         "carbohydrates": 10,
         "protein": 0.9,
@@ -102,7 +102,7 @@
 }, {
     "name": "Grapes",
     "id": 10,
-    "image": "https://i.pngimg.me/thumb/f/720/comhiclipartftbgg.jpg",
+    "image": "backgroundless fruit/grapespngwing.com.png",
     "nutritions": {
         "carbohydrates": 18.1,
         "protein": 0.72,
@@ -113,7 +113,7 @@
 }, {
     "name": "GreenApple",
     "id": 11,
-    "image": "https://healthiersteps.com/wp-content/uploads/2021/12/green-apple-benefits.jpeg",
+    "image": "backgroundless fruit/greenapplepngwing.com.png",
     "nutritions": {
         "carbohydrates": 3.1,
         "protein": 0.4,
@@ -124,7 +124,7 @@
 }, {
     "name": "Guava",
     "id": 12,
-    "image": "http://cdn.shopify.com/s/files/1/2336/3219/products/guava_1024x1024.png?v=1631633543",
+    "image": "backgroundless fruit/guavapngwing.com.png",
     "nutritions": {
         "carbohydrates": 14,
         "protein": 2.6,
@@ -135,7 +135,7 @@
 }, {
     "name": "Kiwi",
     "id": 13,
-    "image": "https://www.producemarketguide.com/sites/default/files/Commodities.tar/Commodities/kiwifruit_commodity-page.png",
+    "image": "backgroundless fruit/kiwi.png",
     "nutritions": {
         "carbohydrates": 15,
         "protein": 1.1,
@@ -146,7 +146,7 @@
 }, {
     "name": "Lemon",
     "id": 14,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Lemon.jpg/1024px-Lemon.jpg",
+    "image": "backgroundless fruit/lemon.png",
     "nutritions": {
         "carbohydrates": 9,
         "protein": 1.1,
@@ -157,7 +157,7 @@
 }, {
     "name": "Lime",
     "id": 15,
-    "image": "https://www.santosfood.com/wp-content/uploads/2020/02/7.jpg",
+    "image": "backgroundless fruit/lime.png",
     "nutritions": {
         "carbohydrates": 8.4,
         "protein": 0.3,
@@ -168,7 +168,7 @@
 }, {
     "name": "Lingonberry",
     "id": 16,
-    "image": "https://d1e3z2jco40k3v.cloudfront.net/-/media/project/oneweb/fon21/articles/2016/02/lingonberry_0jpg.jpg?rev=11ec2e262d924703a28a5766c4c94070",
+    "image": "backgroundless fruit/lingonberry.png",
     "nutritions": {
         "carbohydrates": 11.3,
         "protein": 0.75,
@@ -179,7 +179,7 @@
 }, {
     "name": "Lychee",
     "id": 17,
-    "image": "https://images.heb.com/is/image/HEBGrocery/000448945",
+    "image": "backgroundless fruit/lychee.png",
     "nutritions": {
         "carbohydrates": 17,
         "protein": 0.8,
@@ -190,7 +190,7 @@
 }, {
     "name": "Mango",
     "id": 18,
-    "image": "https://images.heb.com/is/image/HEBGrocery/000321109?fit=constrain,1&wid=800&hei=800&fmt=jpg&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0",
+    "image": "backgroundless fruit/mango.png",
     "nutritions": {
         "carbohydrates": 15,
         "protein": 0.82,
@@ -201,7 +201,7 @@
 }, {
     "name": "Melon",
     "id": 19,
-    "image": "https://static.libertyprim.com/files/familles/melon-large.jpg?1574629891",
+    "image": "backgroundless fruit/melon.png",
     "nutritions": {
         "carbohydrates": 8,
         "protein": 0,
@@ -212,7 +212,7 @@
 }, {
     "name": "Orange",
     "id": 20,
-    "image": "data:image/jpeg;base64,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",
+    "image": "backgroundless fruit/orange.png",
     "nutritions": {
         "carbohydrates": 8.3,
         "protein": 1,
@@ -223,7 +223,7 @@
 }, {
     "name": "Papaya",
     "id": 21,
-    "image": "data:image/jpeg;base64,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",
+    "image": "backgroundless fruit/papaya.png",
     "nutritions": {
         "carbohydrates": 11,
         "protein": 0,
@@ -234,7 +234,7 @@
 }, {
     "name": "Passionfruit",
     "id": 22,
-    "image": "https://cdn.shopify.com/s/files/1/0336/7167/5948/products/image-of-passion-fruit-fruit-28624075980844_600x600.jpg?v=1630618715",
+    "image": "backgroundless fruit/passionfruit.png",
     "nutritions": {
         "carbohydrates": 22.4,
         "protein": 2.2,
@@ -245,7 +245,7 @@
 }, { 
     "name": "Peach",
     "id": 23,
-    "image": "https://static.libertyprim.com/files/familles/peche-large.jpg?1574630286",
+    "image": "backgroundless fruit/peach.png",
     "nutritions" :{
         "carbohydrates": 10,
         "protein": 0.9,
@@ -256,7 +256,7 @@
 }, {
     "name": "Pear",
     "id": 24,
-    "image": "https://img.imageboss.me/fourwinds/width/425/dpr:2/s/files/1/2336/3219/products/shutterstock_1693201075.png?v=1621966032",
+    "image": "backgroundless fruit/pear.png",
     "nutritions": {
         "carbohydrates": 15,
         "protein": 0.4,
@@ -267,7 +267,7 @@
 }, {
     "name": "Pineapple",
     "id": 25,
-    "image": "https://www.meijer.com/content/dam/meijer/product/0002/40/0005/98/0002400005988_1_A1C1_1200.png",
+    "image": "backgroundless fruit/pineapple.png",
     "nutritions": {
         "carbohydrates": 13.12,
         "protein": 0.54,
@@ -278,7 +278,7 @@
 }, {
     "name": "Plum",
     "id": 26,
-    "image": "https://askthefoodgeek.com/wp-content/uploads/2017/02/plums-in-season.jpg",
+    "image": "backgroundless fruit/plum.png",
     "nutritions": {
         "carbohydrates": 11.4,
         "protein": 0.7,
@@ -289,7 +289,7 @@
 }, {
     "name": "Raspberry",
     "id": 27,
-    "image": "https://images.heb.com/is/image/HEBGrocery/000321289?fit=constrain,1&wid=800&hei=800&fmt=jpg&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0",
+    "image": "backgroundless fruit/raspberry.png",
     "nutritions": {
         "carbohydrates": 12,
         "protein": 1.2,
@@ -300,7 +300,7 @@
 }, {
     "name": "Strawberry",
     "id": 28,
-    "image": "https://cdn-prod.medicalnewstoday.com/content/images/articles/320/320894/strawberry-on-white-background-to-represent-strawberry-tongue.jpg",
+    "image": "backgroundless fruit/strawberry.png",
     "nutritions": {
         "carbohydrates": 5.5,
         "protein": 0.8,
@@ -311,7 +311,7 @@
 }, {
     "name": "Tomato",
     "id": 29,
-    "image": "https://www.tastingtable.com/img/gallery/the-2-most-efficient-ways-to-seed-a-large-tomato/intro-1661455016.jpg",
+    "image": "backgroundless fruit/tomato.png",
     "nutritions": {
         "carbohydrates": 3.9,
         "protein": 0.9,
@@ -322,7 +322,7 @@
 }, {
     "name": "Watermelon",
     "id": 30,
-    "image": "https://images.heb.com/is/image/HEBGrocery/000320934",
+    "image": "backgroundless fruit/watermelon.png",
     "nutritions": {
         "carbohydrates": 8,
         "protein": 0.6,

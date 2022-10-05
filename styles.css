@@ -1,63 +1,78 @@
 body {
-        background: url(https://m.media-amazon.com/images/I/61emwBJkFbL._AC_SL1500_.jpg) no-repeat center center fixed;
-        background-attachment: fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-      }
+  background: url(https://m.media-amazon.com/images/I/61emwBJkFbL._AC_SL1500_.jpg) no-repeat center center fixed;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
-  
+
 h1 {
   text-align: left;
   font-size: 60px;
   font-weight: 600;
   font-family: 'Niconne', cursive;
   color: #4fa0ab;
-  text-shadow: 2px 2px 0px  #957dad,
-               4px 4px 0px #ee4b2b;
+  text-shadow: 2px 2px 0px #957dad,
+    4px 4px 0px #ee4b2b;
 }
+
 .card #blend-button {
   float: left;
 }
+
 .card #reset-button {
   justify-content: right;
 }
+
 .card {
   position: fixed;
   width: 200px;
-height: 310px;
-bottom: 20px;
-right: 200px;
-}
-.card #blender {
-position: fixed;
-width: 200px;
-height: 270px;
-bottom: 20px;
-right: 250px;
-}
- #basket { 
-  height: 300px;
-  width: 300px;
-  position: fixed;
+  height: 310px;
   bottom: 20px;
-  left: 250px;
-} 
+  right: 200px;
+}
+
+.card #blender {
+  position: fixed;
+  width: 200px;
+  height: 270px;
+  bottom: 20px;
+  right: 250px;
+}
+
+#basket {
+  height: 300px;
+  width: 410px;
+  position: fixed;
+  bottom: 10px;
+  left: 210px;
+}
 
 .fruit {
-  width: 15%;
-  height: 15%;
+  width: 52px;
+  height: 52px;
+  background-color: aliceblue;
 }
+
 /* .picture-frame {
   position: fixed;
    */
 
 /* } */
-#img  {
-  position: relative;
-  height: 98px;
-  width: 98px;
-  left: 590px;
-  top: 120px;
+#img {
+  position: fixed;
+  height: 150px;
+  width: 150px;
+  left: 670px;
+  top: 19px;
+}
+
+#nori {
+  position: fixed;
+  height: 92px;
+  width: 80px;
+  left: 705px;
+  top: 48px;
 }

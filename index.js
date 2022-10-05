@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const fruitBasket = document.querySelector("#basket")
-    //console.log(fruitBasket)
 
     fetch("http://localhost:3000/Fruits")
         .then(res => res.json())
@@ -9,28 +8,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //function to render the fruits in the ingredients section
     function fruitRender(data) {
-        data.forEach(fruit => {
-            const newFruitImage = document.createElement('img')
-            newFruitImage.src = fruit.image
-            newFruitImage.className = "fruit"
-            newFruitImage.id = fruit.name
-            const fruitNutrition = document.createElement('ul')
-            for (let key in fruit.nutritions) {
-                let newNut = document.createElement('li')
-                newNut.className = key
-                newNut.textContent = fruit.nutritions[key]
-                fruitNutrition.append(newNut)
-            }
-            //console.log(fruitNutrition)
 
-            newFruitImage.appendChild(fruitNutrition)
+    data.forEach(fruit => {
+        const newFruitImage = document.createElement('img')
+        newFruitImage.src = fruit.image
+        newFruitImage.className = "fruit"
+        newFruitImage.id = fruit.name
+        
+        const fruitNutrition = document.createElement('ul')
+        for(let key in fruit.nutritions){
+            let newNut = document.createElement('li')
+            newNut.className = key
+            newNut.textContent = fruit.nutritions[key]
+            fruitNutrition.append(newNut)
+        }
 
-            //adding the eventlistener for drag n drop
-            newFruitImage.addEventListener('dragstart', drag)
-            fruitBasket.addEventListener('drop', drop)
-            fruitBasket.addEventListener('dragover', allowDrop)
+        newFruitImage.appendChild(fruitNutrition)
 
-
+        //adding the eventlistener for drag n drop
+        newFruitImage.addEventListener('dragstart', (e) => {
+            console.log(e.target)
+            e.dataTransfer.setData("text", e.target.id);
+        })
+        fruitBasket.addEventListener('drop', drop)
+        fruitBasket.addEventListener('dragover', allowDrop)
+        
+        
+        fruitBasket.append(newFruitImage)
+       
             const fruitsList = document.querySelector("#fruitList")
             fruitsList.addEventListener("click", () => fruitBasket.append(newFruitImage))
 
@@ -81,19 +86,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //functions to add as callback events for the drag and drop
     function allowDrop(e) {
-        e.preventDefault();
-    }
+        e.preventDefault();   
 
-    function drag(e) {
-        console.log(e.target.id)
-        e.dataTransfer.setData("text", e.target.id);
     }
 
     function drop(e) {
         e.preventDefault();
         console.log(e.target)
-        let data = e.dataTransfer.getData("text");
-        e.target.append(document.getElementById(data));
+        let nutriValues = e.dataTransfer.getData("text");
+        e.target.append(document.getElementById(nutriValues));
     }
 
 

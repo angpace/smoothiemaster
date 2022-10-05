@@ -14,19 +14,23 @@ document.addEventListener('DOMContentLoaded', () => {
             newFruitImage.src = fruit.image
             newFruitImage.className = "fruit"
             newFruitImage.id = fruit.name
-            const fruitNutrition = document.createElement('ul')
+            //const fruitNutrition = document.createElement('ul')
             for (let key in fruit.nutritions) {
-                let newNut = document.createElement('li')
-                newNut.className = key
-                newNut.textContent = fruit.nutritions[key]
-                fruitNutrition.append(newNut)
+                let newNutri = document.createElement('p')
+                newNutri.className = key
+                newNutri.textContent = fruit.nutritions[key]
+                newFruitImage.append(newNutri)
             }
             //console.log(fruitNutrition)
 
-            newFruitImage.appendChild(fruitNutrition)
+            //newFruitImage.appendChild(fruitNutrition)
 
             //adding the eventlistener for drag n drop
-            newFruitImage.addEventListener('dragstart', drag)
+            newFruitImage.addEventListener('dragstart', (e) => {
+                console.log(e.target)
+                e.dataTransfer.setData("text", e.target.id);
+            }
+        )
             fruitBasket.addEventListener('drop', drop)
             fruitBasket.addEventListener('dragover', allowDrop)
 
@@ -84,16 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
     }
 
-    function drag(e) {
-        console.log(e.target.id)
-        e.dataTransfer.setData("text", e.target.id);
-    }
-
     function drop(e) {
         e.preventDefault();
         console.log(e.target)
-        let data = e.dataTransfer.getData("text");
-        e.target.append(document.getElementById(data));
+        let nutriData = e.dataTransfer.getData("text");
+        e.target.append(document.getElementById(nutriData));
     }
 
 

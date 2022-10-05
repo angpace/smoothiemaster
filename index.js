@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cals = document.querySelector('#calories')
     const sugs = document.querySelector('#sugar')
     const header = document.querySelector('#smoothie')
+    const nutriHeaders = document.querySelector('#nutrition_labels')
     carbos.textContent = 0
     prots.textContent = 0
     fats.textContent = 0
@@ -65,8 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
         function displayNutrition(){
             header.style.display = "block"
+            nutriHeaders.style.display = "block"
         }
-        
+
         blendButton.addEventListener('click', () => {
             blender.addEventListener('mouseover', displayNutrition)
         })
@@ -77,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             header.querySelector("#calories").textContent = 0
             header.querySelector("#sugar").textContent = 0
             header.style.display = "none"
+            nutriHeaders.style.display = "none"
             blender.removeEventListener('mouseover', displayNutrition)
             alert(`You're smoothie has been reset`)
         })

@@ -25,7 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
         newFruitImage.appendChild(fruitNutrition)
 
         //adding the eventlistener for drag n drop
-        newFruitImage.addEventListener('dragstart', drag)
+        newFruitImage.addEventListener('dragstart', (e) => {
+            console.log(e.target)
+            e.dataTransfer.setData("text", e.target.id);
+        })
         fruitBasket.addEventListener('drop', drop)
         fruitBasket.addEventListener('dragover', allowDrop)
         
@@ -40,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     pictureFrame.src = "Art-empty-frame-in-golden-on-transparent-background-PNG.png"
     frameDiv.append(pictureFrame)
 
-    pictureFrame.addEventListener("click", () => {
+    pictureFrame.addEventListener("mouseover", () => {
         alert('suprise!')
     })
     
@@ -74,11 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //functions to add as callback events for the drag and drop
     function allowDrop(e) {
         e.preventDefault();   
-    }
-      
-    function drag(e) {
-        console.log(e.target)
-        e.dataTransfer.setData("text", e.target.id);
     }
       
     function drop(e) {

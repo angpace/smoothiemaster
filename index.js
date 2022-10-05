@@ -1,11 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     const fruitBasket = document.querySelector("#basket")
-    const smoothie = document.querySelector('#protein')
+    const carbos = document.querySelector('#carbohydrates')
+    const prots = document.querySelector('#protein')
+    const fats = document.querySelector('#fat')
+    const cals = document.querySelector('#calories')
+    const sugs = document.querySelector('#sugar')
     const header = document.querySelector('#smoothie')
-    smoothie.textContent = 0
-    header.append(smoothie)
+    carbos.textContent = 0
+    prots.textContent = 0
+    fats.textContent = 0
+    cals.textContent = 0
+    sugs.textContent = 0
     
-    //console.log(fruitBasket)
 
     fetch("http://localhost:3000/Fruits")
         .then(res => res.json())
@@ -13,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     //function to render the fruits in the ingredients section
-    // debugger
     function fruitRender(data) {
         data.forEach(fruit => {
             const newFruitImage = document.createElement('img')
@@ -22,14 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
             newFruitImage.id = fruit.id
             const nutrition = document.createElement('p')
             nutrition.textContent = Object.values(fruit.nutritions)
-            // console.log(Object.values(fruit.nutritions))
             newFruitImage.append(nutrition)
-            // console.log(Object.values(fruit.nutritions))
+            
             newFruitImage.addEventListener('dragstart', (e) => {
                 console.log(e.target.id)
-                // e.target.id
+                console.log(Object.values(fruit.nutritions))
                 e.dataTransfer.setData("text", Object.values(fruit.nutritions));
-                // console.log(Object.values(fruit.nutritions))
             }
 
 
@@ -44,13 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         const blendDiv = document.querySelector(".card")
         const blender = document.getElementById("blender")
-        // const smoothie = document.querySelector('#protein')
-        // .append(smoothie)
     
         //adding the event listener to the blender
         blender.addEventListener('drop', drop)
         blender.addEventListener('dragover', allowDrop)
-    
+        
+        //adding the buttons, blend & reset
         const blendButton = document.createElement('button')
         blendButton.textContent = "Blend"
         blendButton.className = "btn"
@@ -60,12 +62,23 @@ document.addEventListener('DOMContentLoaded', () => {
         resetButton.textContent = "Reset"
         resetButton.className = "btn"
         resetButton.id = "reset-button"
-    
+        
+        function displayNutrition(){
+            header.style.display = "block"
+        }
+        
         blendButton.addEventListener('click', () => {
-            alert("Oops, nothing to blend! Try adding fruit by dragging them to the blender")
+            blender.addEventListener('mouseover', displayNutrition)
         })
         resetButton.addEventListener('click', () => {
-            alert("Reset!")
+            header.querySelector("#carbohydrates").textContent = 0
+            header.querySelector("#protein").textContent = 0
+            header.querySelector("#fat").textContent = 0
+            header.querySelector("#calories").textContent = 0
+            header.querySelector("#sugar").textContent = 0
+            header.style.display = "none"
+            blender.removeEventListener('mouseover', displayNutrition)
+            alert(`You're smoothie has been reset`)
         })
     
         blendDiv.append(blendButton)
@@ -78,29 +91,27 @@ document.addEventListener('DOMContentLoaded', () => {
     
         function drop(e) {
             e.preventDefault();
-            // console.log(e.target)
             let nutriData = e.dataTransfer.getData("text");
             e.target.append(document.getElementById(nutriData));
-            // console.log(e.dataTransfer.getData("text"))
             let fruitValues = e.dataTransfer.getData("text")
             console.log(e.target)
             smoothieFunction(fruitValues)
-            // console.log(fruitValues)
         }
   
         function smoothieFunction(fruitValues) {
-            // let fruitCarbs = parseFloat(`${fruitValues}`)
             const fruitArray = fruitValues.split(",")
+            const carbohydrates =  fruitArray[0]
             const protein = fruitArray[1]
-            smoothie.textContent = parseFloat(`${smoothie.textContent}`) + parseFloat(`${protein}`)
-            console.log(protein)
-           
-
-        //    let smoothieProtein = fruitValues[nutritions][1]  
-        //    console.log(`your fruit has ${smoothieCarbs} carbs!`)
-        //    console.log(smoothieProtein)
+            const fat = fruitArray[2]
+            const calories =fruitArray[3]
+            const sugar = fruitArray[4]
+            
+            carbos.textContent = (parseFloat(`${carbos.textContent}`) + parseFloat(`${carbohydrates}`)).toFixed(2)
+            prots.textContent = (parseFloat(`${prots.textContent}`) + parseFloat(`${protein}`)).toFixed(2)
+            fats.textContent = (parseFloat(`${fats.textContent}`) + parseFloat(`${fat}`)).toFixed(2)
+            cals.textContent = (parseFloat(`${cals.textContent}`) + parseFloat(`${calories}`)).toFixed(2)
+            sugs.textContent = (parseFloat(`${sugs.textContent}`) + parseFloat(`${sugar}`)).toFixed(2)
         }
-        // smoothieFunction()
     }
 
     const frameDiv = document.getElementById('picture-frame')
@@ -114,10 +125,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     frameDiv.append(noriPic)
 
-    // pictureFrame.addEventListener("mouseover", () => {
-        // alert('Woof, Woof!')
+    pictureFrame.addEventListener("mouseover", () => {
+         alert('Woof, Woof!')
     })
 
     
 
-// })
+})

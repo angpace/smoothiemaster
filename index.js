@@ -34,10 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log(e.target.id)
                 console.log(Object.values(fruit.nutritions))
                 e.dataTransfer.setData("text", Object.values(fruit.nutritions));
-            }
+            })
 
 
-        )
             fruitBasket.addEventListener('drop', drop)
             fruitBasket.addEventListener('dragover', allowDrop)
 
@@ -81,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
             header.style.display = "none"
             nutriHeaders.style.display = "none"
             blender.removeEventListener('mouseover', displayNutrition)
-            alert(`You're smoothie has been reset`)
         })
     
         blendDiv.append(blendButton)

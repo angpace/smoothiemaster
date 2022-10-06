@@ -77,3 +77,14 @@ h1 {
   top: 48px;
 }
 
+#smoothie{
+  position: fixed;
+  right: 160px;
+  top: 100px;
+}
+
+#nutrition_labels{
+  position: fixed;
+  left: 910px;
+  top: 125px
+}

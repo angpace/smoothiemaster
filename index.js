@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    //declaring variables to be used later 
     const fruitBasket = document.querySelector("#basket")
     const carbos = document.querySelector('#carbohydrates')
     const prots = document.querySelector('#protein')
@@ -17,14 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const smoothiePictureContainer = document.querySelector('#smoothiePictureContainer')
     const smoothiePicture = document.querySelector('#smoothiePicture')
 
+    //fetching the fruits from local db
     fetch("http://localhost:3000/Fruits")
-        .then(res => res.json())
-        .then(data => fruitRender(data))
+    .then(res => res.json())
+    .then(data => fruitRender(data))
 
 
     //function to render the fruits in the ingredients section
     function fruitRender(data) {
         data.forEach(fruit => {
+            //creates the images
             const newFruitImage = document.createElement('img')
             newFruitImage.src = fruit.image
             newFruitImage.title = fruit.name
@@ -34,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nutrition.textContent = Object.values(fruit.nutritions)
             newFruitImage.append(nutrition)
             
+            //making the images draggable
             newFruitImage.addEventListener('dragstart', (e) => {
                 console.log(e.target.id)
                 console.log(Object.values(fruit.nutritions))
@@ -43,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fruitBasket.addEventListener('drop', drop)
             fruitBasket.addEventListener('dragover', allowDrop)
 
-
+            //fruits will only appear after you hit the button
             const fruitsList = document.querySelector("#fruitList")
             fruitsList.addEventListener("click", () => fruitBasket.append(newFruitImage))
 
@@ -66,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resetButton.className = "btn"
         resetButton.id = "reset-button"
 
+        //functions to make the nutrition values and smoothie img visible 
         function displaySmoothie(){
             smoothiePictureContainer.style.display = "block"
             smoothiePicture.style.display = "block"
@@ -76,13 +81,15 @@ document.addEventListener('DOMContentLoaded', () => {
             nutriHeaders.style.display = "block"
             nutriTitle.style.display = "block"
         }
+
+        //giving the buttons their events 
         blendButton.addEventListener('click', () => {
             if (cals.textContent > 0) {   
                 displayNutrition()
                 blender.addEventListener('mouseover', displaySmoothie)
             }
             else {
-                alert('Nothing to blend! Try clicking "reset" and then dragging fruit to the blender' )
+                alert('Nothing to blend! Click "reset" and then drag fruit to the blender' )
             }
 
         })
@@ -90,8 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
         blendButton.addEventListener("click", () => {
             fruitBasket.style.display = "none"
         })
-
-
 
         resetButton.addEventListener('click', () => {
             header.querySelector("#carbohydrates").textContent = 0
@@ -113,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         blendDiv.append(blendButton)
         blendDiv.append(resetButton)
 
-        //functions to add as callback events for the drag and drop
+        //functions to add as callback events for the drag and drop event
         function allowDrop(e) {
             e.preventDefault();
         }
@@ -143,6 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    //adding the easter egg picture of Nori and the event
     const frameDiv = document.getElementById('picture-frame')
     const pictureFrame = document.createElement('img')
     pictureFrame.id = "img"

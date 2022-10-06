@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('#smoothie')
     smoothie.textContent = 0
     header.append(smoothie)
-    
+
     //console.log(fruitBasket)
 
     fetch("http://localhost:3000/Fruits")
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
 
-        )
+            )
             fruitBasket.addEventListener('drop', drop)
             fruitBasket.addEventListener('dragover', allowDrop)
 
@@ -46,36 +46,36 @@ document.addEventListener('DOMContentLoaded', () => {
         const blender = document.getElementById("blender")
         // const smoothie = document.querySelector('#protein')
         // .append(smoothie)
-    
+
         //adding the event listener to the blender
         blender.addEventListener('drop', drop)
         blender.addEventListener('dragover', allowDrop)
-    
+
         const blendButton = document.createElement('button')
         blendButton.textContent = "Blend"
         blendButton.className = "btn"
         blendButton.id = "blend-button"
-    
+
         const resetButton = document.createElement('button')
         resetButton.textContent = "Reset"
         resetButton.className = "btn"
         resetButton.id = "reset-button"
-    
+
         blendButton.addEventListener('click', () => {
             alert("Oops, nothing to blend! Try adding fruit by dragging them to the blender")
         })
         resetButton.addEventListener('click', () => {
             alert("Reset!")
         })
-    
+
         blendDiv.append(blendButton)
         blendDiv.append(resetButton)
-    
+
         //functions to add as callback events for the drag and drop
         function allowDrop(e) {
             e.preventDefault();
         }
-    
+
         function drop(e) {
             e.preventDefault();
             // console.log(e.target)
@@ -87,18 +87,18 @@ document.addEventListener('DOMContentLoaded', () => {
             smoothieFunction(fruitValues)
             // console.log(fruitValues)
         }
-  
+
         function smoothieFunction(fruitValues) {
             // let fruitCarbs = parseFloat(`${fruitValues}`)
             const fruitArray = fruitValues.split(",")
             const protein = fruitArray[1]
             smoothie.textContent = parseFloat(`${smoothie.textContent}`) + parseFloat(`${protein}`)
             console.log(protein)
-           
 
-        //    let smoothieProtein = fruitValues[nutritions][1]  
-        //    console.log(`your fruit has ${smoothieCarbs} carbs!`)
-        //    console.log(smoothieProtein)
+
+            //    let smoothieProtein = fruitValues[nutritions][1]  
+            //    console.log(`your fruit has ${smoothieCarbs} carbs!`)
+            //    console.log(smoothieProtein)
         }
         // smoothieFunction()
     }
@@ -110,14 +110,15 @@ document.addEventListener('DOMContentLoaded', () => {
     frameDiv.append(pictureFrame)
     const noriPic = document.createElement('img')
     noriPic.id = "nori"
-    noriPic.src = "noripicture.png"
+    noriPic.src = "norinew.png"
 
-    frameDiv.append(noriPic)
+    // frameDiv.append(noriPic)
 
-    // pictureFrame.addEventListener("mouseover", () => {
-        // alert('Woof, Woof!')
+    pictureFrame.addEventListener("mouseover", () => {
+        frameDiv.append(noriPic)
+    })
     })
 
-    
+
 
 // })

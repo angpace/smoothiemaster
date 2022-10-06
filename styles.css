@@ -86,14 +86,23 @@ h1 {
 
 #smoothie{
   position: fixed;
-  right: 160px;
-  top: 100px;
+  right: 179px;
+  top: 99px;
+  color: lightblue;
+  background-color: grey;
+  /*border-style: inset;*/
+  border-style: outset;
 }
 
 #nutrition_labels{
   position: fixed;
+  text-align: right;
   left: 910px;
-  top: 125px
+  top: 125px;
+  color: lightblue;
+  background-color: grey;
+  border-style: inset;
+  /*border-style: outset;*/
 }
 
 #smoothiePicture{
@@ -102,4 +111,28 @@ h1 {
   top: 485px;
   height: 275px;
   width: 190px;
+}
+
+
+/* CSS */
+button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+
+  background: #6E6D70;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+  color: #DFDEDF;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
 }

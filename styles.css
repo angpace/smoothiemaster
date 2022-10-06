@@ -88,3 +88,11 @@ h1 {
   left: 910px;
   top: 125px
 }
+
+#smoothiePicture{
+  position: fixed;
+  left: 800px;
+  top: 485px;
+  height: 275px;
+  width: 190px;
+}

@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
     cals.textContent = 0
     sugs.textContent = 0
 
+    const smoothiePictureContainer = document.querySelector('#smoothiePictureContainer')
+    const smoothiePicture = document.querySelector('#smoothiePicture')
+
     fetch("http://localhost:3000/Fruits")
         .then(res => res.json())
         .then(data => fruitRender(data))
@@ -60,13 +63,21 @@ document.addEventListener('DOMContentLoaded', () => {
         resetButton.textContent = "Reset"
         resetButton.className = "btn"
         resetButton.id = "reset-button"
+
+        function displaySmoothie(){
+            smoothiePictureContainer.style.display = "block"
+            smoothiePicture.style.display = "block"
+        }
         
         function displayNutrition(){
             header.style.display = "block"
             nutriHeaders.style.display = "block"
         }
         blendButton.addEventListener('click', () => {
-            blender.addEventListener('mouseover', displayNutrition)
+            displayNutrition()
+            // blender.addEventListener('mouseover', displayNutrition);
+            blender.addEventListener('mouseover', displaySmoothie)
+
         })
         resetButton.addEventListener('click', () => {
             header.querySelector("#carbohydrates").textContent = 0

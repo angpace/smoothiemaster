@@ -75,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         blendButton.addEventListener('click', () => {
             displayNutrition()
-            // blender.addEventListener('mouseover', displayNutrition);
             blender.addEventListener('mouseover', displaySmoothie)
 
         })
@@ -87,6 +86,10 @@ document.addEventListener('DOMContentLoaded', () => {
             header.querySelector("#sugar").textContent = 0
             header.style.display = "none"
             nutriHeaders.style.display = "none"
+            smoothiePictureContainer.style.display = "none"
+            smoothiePicture.style.display = "none"
+
+
             blender.removeEventListener('mouseover', displayNutrition)
         })
 

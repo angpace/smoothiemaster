@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
             smoothiePicture.style.display = "none"
 
 
-            blender.removeEventListener('mouseover', displayNutrition)
+            blender.removeEventListener('mouseover', displaySmoothie)
         })
 
         blendDiv.append(blendButton)

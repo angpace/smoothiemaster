@@ -132,14 +132,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const carbohydrates =  fruitArray[0]
             const protein = fruitArray[1]
             const fat = fruitArray[2]
-            const calories =fruitArray[3]
             const sugar = fruitArray[4]
+            const calories =fruitArray[3]
             
-            carbos.textContent = (parseFloat(`${carbos.textContent}`) + parseFloat(`${carbohydrates}`)).toFixed(2)
-            prots.textContent = (parseFloat(`${prots.textContent}`) + parseFloat(`${protein}`)).toFixed(2)
-            fats.textContent = (parseFloat(`${fats.textContent}`) + parseFloat(`${fat}`)).toFixed(2)
-            cals.textContent = (parseFloat(`${cals.textContent}`) + parseFloat(`${calories}`)).toFixed(2)
-            sugs.textContent = (parseFloat(`${sugs.textContent}`) + parseFloat(`${sugar}`)).toFixed(2)
+            carbos.textContent = (parseFloat(`${carbos.textContent}`) + parseFloat(`${carbohydrates}`)).toFixed(2) + ` g`
+            prots.textContent = (parseFloat(`${prots.textContent}`) + parseFloat(`${protein}`)).toFixed(2) + ` g`
+            fats.textContent = (parseFloat(`${fats.textContent}`) + parseFloat(`${fat}`)).toFixed(2) + ` g`
+            sugs.textContent = (parseFloat(`${sugs.textContent}`) + parseFloat(`${sugar}`)).toFixed(2) + ` g`
+            cals.textContent = (parseFloat(`${cals.textContent}`) + parseFloat(`${calories}`))
         }
     }
 

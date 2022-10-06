@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fruitBasket.style.display = "block"
 
 
-            blender.removeEventListener('mouseover', displayNutrition)
+            blender.removeEventListener('mouseover', displaySmoothie)
         })
 
         blendDiv.append(blendButton)

@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sugs = document.querySelector('#sugar')
     const header = document.querySelector('#smoothie')
     const nutriHeaders = document.querySelector('#nutrition_labels')
+    const nutriTitle = document.querySelector('#title')
     carbos.textContent = 0
     prots.textContent = 0
     fats.textContent = 0
@@ -72,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function displayNutrition(){
             header.style.display = "block"
             nutriHeaders.style.display = "block"
+            nutriTitle.style.display = "block"
         }
         blendButton.addEventListener('click', () => {
             if (carbos.textContent > 0,
@@ -101,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             header.querySelector("#sugar").textContent = 0
             header.style.display = "none"
             nutriHeaders.style.display = "none"
+            nutriTitle.style.display = "none"
             smoothiePictureContainer.style.display = "none"
             smoothiePicture.style.display = "none"
             fruitBasket.style.display = "block"

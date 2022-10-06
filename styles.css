@@ -86,23 +86,22 @@ h1 {
 
 #smoothie{
   position: fixed;
-  right: 179px;
-  top: 99px;
-  color: lightblue;
-  background-color: grey;
-  /*border-style: inset;*/
-  border-style: outset;
+  right: 286px;
+  top: 132px;
+  text-align: right;
 }
 
 #nutrition_labels{
   position: fixed;
   text-align: right;
-  left: 910px;
-  top: 125px;
-  color: lightblue;
-  background-color: grey;
-  border-style: inset;
-  /*border-style: outset;*/
+  left: 915px;
+  top: 132px;
+}
+
+#title {
+  position: fixed;
+  right: 279px;
+  top: 100px;
 }
 
 #smoothiePicture{
@@ -135,4 +134,8 @@ button {
 button:focus {
   box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
   outline: 0;
+}
+
+.btn {
+  margin-right: 5px;
 }

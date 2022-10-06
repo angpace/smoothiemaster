@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fats.textContent = 0
     cals.textContent = 0
     sugs.textContent = 0
-    
 
     fetch("http://localhost:3000/Fruits")
         .then(res => res.json())
@@ -37,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
 
-        )
+            )
             fruitBasket.addEventListener('drop', drop)
             fruitBasket.addEventListener('dragover', allowDrop)
 
@@ -58,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         blendButton.textContent = "Blend"
         blendButton.className = "btn"
         blendButton.id = "blend-button"
-    
+
         const resetButton = document.createElement('button')
         resetButton.textContent = "Reset"
         resetButton.className = "btn"
@@ -68,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
             header.style.display = "block"
             nutriHeaders.style.display = "block"
         }
-
         blendButton.addEventListener('click', () => {
             blender.addEventListener('mouseover', displayNutrition)
         })
@@ -83,15 +81,15 @@ document.addEventListener('DOMContentLoaded', () => {
             blender.removeEventListener('mouseover', displayNutrition)
             alert(`You're smoothie has been reset`)
         })
-    
+
         blendDiv.append(blendButton)
         blendDiv.append(resetButton)
-    
+
         //functions to add as callback events for the drag and drop
         function allowDrop(e) {
             e.preventDefault();
         }
-    
+
         function drop(e) {
             e.preventDefault();
             let nutriData = e.dataTransfer.getData("text");
@@ -100,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(e.target)
             smoothieFunction(fruitValues)
         }
-  
+
         function smoothieFunction(fruitValues) {
             const fruitArray = fruitValues.split(",")
             const carbohydrates =  fruitArray[0]
@@ -124,14 +122,13 @@ document.addEventListener('DOMContentLoaded', () => {
     frameDiv.append(pictureFrame)
     const noriPic = document.createElement('img')
     noriPic.id = "nori"
-    noriPic.src = "noripicture.png"
+    noriPic.src = "norinew.png"
 
-    frameDiv.append(noriPic)
 
     pictureFrame.addEventListener("mouseover", () => {
-         alert('Woof, Woof!')
+        frameDiv.append(noriPic)
     })
 
-    
+
 
 })

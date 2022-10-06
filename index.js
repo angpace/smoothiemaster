@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         data.forEach(fruit => {
             const newFruitImage = document.createElement('img')
             newFruitImage.src = fruit.image
+            newFruitImage.title = fruit.name
             newFruitImage.className = "fruit"
             newFruitImage.id = fruit.id
             const nutrition = document.createElement('p')
@@ -76,12 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
             nutriTitle.style.display = "block"
         }
         blendButton.addEventListener('click', () => {
-            if (carbos.textContent > 0,
-            prots.textContent > 0,
-            fats.textContent > 0,
-            cals.textContent > 0,
-            sugs.textContent > 0) {displayNutrition()
-            blender.addEventListener('mouseover', displaySmoothie)
+            if (cals.textContent > 0) {   
+                displayNutrition()
+                blender.addEventListener('mouseover', displaySmoothie)
             }
             else {
                 alert('Nothing to blend! Try clicking "reset" and then dragging fruit to the blender' )
